@@ -12,7 +12,7 @@ export function getUserById(userId) {
 }
 
 export function createUser(userData) {
-  fetch(baseUrl, {
+  return fetch(baseUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'
@@ -22,13 +22,13 @@ export function createUser(userData) {
 }
 
 export function deleteUser(userId) {
-  fetch(`${baseUrl}/${userId}`, {
+  return fetch(`${baseUrl}/${userId}`, {
     method: 'DELETE',
   })
 }
 
 export function updateUser(userId, userData) {
-  fetch(`${baseUrl}/${userId}`, {
+  return fetch(`${baseUrl}/${userId}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json;charset=utf-8',
